@@ -2,11 +2,11 @@ import streamlit as st
 from pathlib import Path
 import google.generativeai as genai
 
-from api_key_Korin import api_key
+#from api_key_Korin import api_key
 
 # Configure generative AI with API key
-genai.configure(api_key=api_key)
-
+#genai.configure(api_key=api_key)
+genai.configure(api_key=st.secrets["api_key"])
 # Setup the model configuration
 generation_config = {
     "temperature": 1,
